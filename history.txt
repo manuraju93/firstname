@@ -1,0 +1,1000 @@
+   42  sudo service httpd stop
+   43  ps -ef | grep httpd
+   44  sudo service httpd start
+   45  sudo service httpd restart
+   46  sudo service httpd stop
+   47  clear
+   48  uname -r
+   49  cat /etc/os-release 
+   50  uname -a
+   51  uname -m
+   52  clear
+   53  man find
+   54  cd linux_commands/
+   55  ls -lrt
+   56  cd ..
+   57  ls -lrt
+   58  mv sub_dir1 linux_commands/
+   59  cd linux_commands/
+   60  ls -lrt
+   61  cd sub_dir1/
+   62  ls -lrt
+   63  cd sub_dir2/
+   64  ls -lrt
+   65  pwd
+   66  cd
+   67  clear
+   68  pwd
+   69  find . -name "xyz.txt"
+   70  find /home/ec2-user -name "xyz.txt"
+   71  find /home/ec2-user -name "XYZ.txt"
+   72  find /home/ec2-user -iname "XYZ.txt"
+   73  clear
+   74  find /home/ec2-user -type f -mtime +10
+   75  find /home/ec2-user -type f -mtime -10
+   76  clear
+   77  pwd
+   78  find . -name xyz.txt
+   79  find /home -name xyz.txt
+   80  find /home -iname xyz.txt
+   81  find /home -iname xyz.TXT
+   82  find /home/ec2-user -type f -mtime +10
+   83  find . -type d -mtime +10
+   84  find . -type d -mtime -10
+   85  find /home/ec2-user -type d -mtime -10
+   86  cd linux_commands/
+   87  ls -lrt
+   88  cat qwerty 
+   89  echo "HELLO" >qwerty 
+   90  cd
+   91  clear
+   92  find /home -type f -mmin -5
+   93  find /home -type f -mmin +5
+   94  clear
+   95  find /home -type f -perm 0777
+   96  ls -lrt /home/ec2-user/linux_commands/file3.txt
+   97  find /home -type d -perm 0655
+   98  find /home -type d -perm 0755
+   99  find /home -type d -perm 0777
+  100  find /home -type d -perm 0744
+  101  find / -type f -user root
+  102  find / -type f -user ec2-user
+  103  clear
+  104  cd linux_commands/
+  105  ls -lrt
+  106  cd sub_dir1/
+  107  ls -lrt
+  108  cd
+  109  find /home/ec2-user -name "file1.txt"
+  110  find /home/ec2-user -type f -maxdepth 1
+  111  find /home/ec2-user -type f -maxdepth 2
+  112  find /home/ec2-user -type f -maxdepth 3
+  113  find /home/ec2-user -type f -maxdepth 2
+  114  find /home/ec2-user  -maxdepth 2 -type f
+  115  find /home/ec2-user -type f 
+  116  find /home/ec2-user -type f | grep sub_dir1
+  117  find /home/ec2-user -type f | grep sub_dir1 | grep -v sub_dir2
+  118  find /home/ec2-user/linux_commands/sub_dir1 -type f
+  119  find /home/ec2-user/linux_commands/sub_dir1 -type f | grep -v sub_dir2
+  120  find /home/ec2-user/linux_commands/sub_dir1 -type f | grep -v sub_dir2 |rm 
+  121  find /home/ec2-user/linux_commands/sub_dir1 -type f | grep -v sub_dir2 | xargs rm 
+  122  ls -lrt /home/ec2-user/linux_commands/sub_dir1
+  123  clear
+  124  find /home/ec2-user -type f -mtime +10 
+  125  find /home/ec2-user/linux_commands -type f -mtime +10 
+  126  find /home/ec2-user/linux_commands -type f -mtime +10 | xargs rm
+  127  ls -lrt
+  128  clear
+  129  find /home/ec2-user -type f -size +1
+  130  find /home/ec2-user -type f -size +1G
+  131  find /home/ec2-user -type f -size +1M
+  132  find /home/ec2-user -type f -size +10
+  133  ls -lrt
+  134  cd linux_commands/sub_dir1/sub_dir2/
+  135  ls -lrt
+  136  pwd
+  137  cd
+  138  ls -lrt
+  139  ln -s /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt test_link
+  140  ls -lrt
+  141  cat test_link 
+  142  cd -
+  143  ls -lrt
+  144  pwd
+  145  vi xyz.txt 
+  146  pwd
+  147  cd
+  148  pwd
+  149  ls -lrt
+  150  cat test_link 
+  151  vi test_link 
+  152  cat test_link 
+  153  cat /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt
+  154  ls -lrt
+  155  rm /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt
+  156  ls -lrt
+  157  cat test_link 
+  158  ln -s /home/ec2-user/linux_commands/file1.txt test_link
+  159  rm test_link 
+  160  ln -s /home/ec2-user/linux_commands/file1.txt test_link
+  161  ls -lrt
+  162  pwd
+  163  cat /home/ec2-user/linux_commands/file1.txt
+  164  rm test_link 
+  165  cat /home/ec2-user/linux_commands/file3.txt
+  166  ln -s /home/ec2-user/linux_commands/file3.txt test_link
+  167  ls -lrt
+  168  rm /home/ec2-user/linux_commands/file3.txt
+  169  ls -lrt
+  170  touch /home/ec2-user/linux_commands/file3.txt
+  171  ls -lrt
+  172  cat test_link 
+  173  cd linux_commands/sub_dir1/sub_dir2/
+  174  ls -lrt
+  175  echo "HELLO WORLD" >xyz.txt
+  176  pwd
+  177  ls 
+  178  cd
+  179  ls -lrt
+  180  ln /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt hard_link
+  181  ls -lrt
+  182  cat hard_link 
+  183  vi hard_link 
+  184  cat hard_link 
+  185  cat /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt
+  186  ls -i /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt
+  187  ls -i hard_link 
+  188  ls -lrt
+  189  ls -i /home/ec2-user/linux_commands/file3.txt
+  190  ls -i test_link
+  191  rm /home/ec2-user/linux_commands/sub_dir1/sub_dir2/xyz.txt
+  192  ls -lrt
+  193  cat hard_link 
+  194  pwd
+  195  ls -lrt
+  196  ls -a
+  197  ls -lart
+  198  ls -i test_link
+  199  pwd
+  200  ls -i *
+  201  lsof
+  202  clear
+  203  man lsof
+  204  sudo su -
+  205  whereis hhtpd
+  206  whereis httpd
+  207  whereis java
+  208  whereis vim
+  209  ifconfig
+  210  ifconfig up eth0
+  211  ip
+  212  ip addr show
+  213  man ping
+  214  man netstat
+  215  netstat -a
+  216  netstat -l
+  217  netstat -tl
+  218  netstat -ptl
+  219  host
+  220  hostname
+  221  traceroute
+  222  traceroute 8.8.8.8
+  223  dig google.com
+  224  nslookup google.com
+  225  hostname
+  226  nslookup ip-172-31-37-157.ap-south-1.compute.internal
+  227  pwd
+  228  ls -lrt
+  229  man scp
+  230  man rsync
+  231  ps -ef | grep httpd
+  232  sudo service httpd start
+  233  netstat -l
+  234  netstat -a
+  235  netstat -tpl
+  236  psaux
+  237  ps aux
+  238  cd linux_commands/
+  239  ls -lrt
+  240  diff file1.txt file2.txt  
+  241  sdiff file1.txt file2.txt  
+  242  clear
+  243  cmp file1.txt file2.txt 
+  244  man cmp
+  245  comm file1.txt file2.txt 
+  246  scomm file1.txt file2.txt 
+  247  sdiff file1.txt file2.txt 
+  248  man comm
+  249  comm -12 file1.txt file2.txt 
+  250  man comm
+  251  comm -12 file1.txt file2.txt  --nocheck-order
+  252  comm -2 file1.txt file2.txt  --nocheck-order
+  253  comm -1 file1.txt file2.txt  --nocheck-order
+  254  clear
+  255  sort
+  256  echo "4 7 8 9 1 3" 
+  257  echo "4 7 8 9 1 3" | sort
+  258  ls -lrt
+  259  vi qwerty 
+  260  cat qwerty 
+  261  cat qwerty | sort
+  262  vi qwerty 
+  263  cat qwerty | sort
+  264  cat qwerty | sort -r
+  265  man mount
+  266  cd /
+  267  ls -lrt
+  268  cd
+  269  ls -lrt /
+  270  man mount
+  271  cd /tmp/
+  272  l s-lrt
+  273  ls -lrt
+  274  pwd
+  275  wget https://github.com/phayes/geoPHP/tarball/master
+  276  ls -lrt
+  277  cat master 
+  278  wget https://dev-files.blender.org/file/download/bwdp5reejwpkuh5i2oak/PHID-FILE-nui3bpuan4wdvd7yzjrs/sample.tar.gz
+  279  ls -lrt
+  280  man tar
+  281  ls -lrt
+  282  tar -xf sample.tar.gz 
+  283  ls -lrt
+  284  tar -xvf sample.tar.gz 
+  285  ls -lrt
+  286  cd project/
+  287  ls -lrt
+  288  cd shot/
+  289  ls -lrt
+  290  cat sample.blend 
+  291  q
+  292  cd 
+  293  cd linux_commands/
+  294  ls -lrt
+  295  tar -czvf devops.tar file*
+  296  ls -lrt
+  297  man sudo
+  298  curl -v https://www.google.com/
+  299  curl -Is https://www.google.com/
+  300  curl -Is https://www.googlee.com/ 
+  301  curl -Is https://www.abcd.com/ 
+  302  curl -Is http://ec2-13-126-39-88.ap-south-1.compute.amazonaws.com/
+  303  curl -Is http://ec2-13-126-39-88.ap-south-1.compute.amazonaws.com/| head -1
+  304  curl -Is http://ec2-13-126-39-88.ap-south-1.compute.amazonaws.com/| head -1 | cut -d " " -f2
+  305  curl -Is https://www.google.com/ | head -1 | cut -d " " -f2
+  306  curl -Is http://ec2-13-126-39-88.ap-south-1.compute.amazonaws.com/index.html| head -1 | cut -d " " -f2
+  307  man curl
+  308  ls -lrt
+  309  date
+  310  cal
+  311  date --date="09/10/1960"
+  312  date +"Year: %Y, Month: %m, Day: %d"
+  313  date +"Week number: %V Year: %y"
+  314  date --date="2 year ago"
+  315  date --date="yesterday"
+  316  date --date="next monday"
+  317  date --date="4 day"
+  318  date --date="tomorrow"
+  319  clear
+  320  date +'%Y-%m-%d'
+  321  date +'%Y%m%d'
+  322  clear
+  323  top
+  324  stress --cpu 1 --timeout 60
+  325  sudo yum install stress -y
+  326  sudo amazon-linux-extras install epel -y
+  327  sudo yum install stress -y
+  328  which stress
+  329  ls -lrt /usr/bin
+  330  cat /usr/bin/awk 
+  331  ls -lrt /usr/bin
+  332  cat /usr/bin/cut 
+  333  stress --cpu 1 --timeout 60
+  334  cd
+  335  clear
+  336  ssh-keygen
+  337  ls -lart
+  338  cd .ssh/
+  339  ls -lrt
+  340  cat id_rsa.pub
+  341  cd
+  342  ssh 172.31.40.147
+  343  cd .ssh/
+  344  ls -lrt
+  345  cd
+  346  uptime
+  347  cd linux_commands/
+  348  ls -lrt
+  349  ls -lrt | awk -F " " '{print $(NF-3)}'
+  350  ls -lrt | awk -F " " '{print $NF-3}'
+  351  ls -lrt | awk -F " " '{print $(NF-3)}'
+  352  ls -lrt |tail -n+2 | awk -F " " '{print $(NF-3)}'
+  353  ls -lrt |tail -n+2 | awk -F " " '{print $(NF-2)}'
+  354  ls -lrt |tail -n+2 | awk -F " " '{print $(NF-2)}' | uniq
+  355  ls -lrt |tail -n+2 | awk -F " " '{print $(NF-2)}' | uniq | sort -r
+  356  top
+  357  clear
+  358  cd linux_commands/
+  359  cd ..
+  360  mkdir shell_scripts
+  361  cd shell_scripts/
+  362  vi basic_script.sh
+  363  echo $SHELL
+  364  vi basic_script.sh
+  365  ls -lrt
+  366  ./basic_script.sh
+  367  chmod 764 basic_script.sh
+  368  ./basic_script.sh
+  369  ./basic_script.sh ANIL LINUX
+  370  cat basic_script.sh 
+  371  vi basic_script.sh
+  372  ./basic_script.sh ANIL LINUX
+  373  sh basic_script.sh ARUN SHELLSCRIPT
+  374  clear
+  375  vi basic_script.sh 
+  376  sh basic_script.sh 
+  377  vi basic_script.sh 
+  378  vi sample.sh
+  379  chmod u+x sample.sh 
+  380  sh sample.sh 5
+  381  sh sample.sh 2
+  382  sh sample.sh 6
+  383  sh sample.sh 9
+  384  vi sample.sh
+  385  sh sample.sh 9
+  386  sh sample.sh 5
+  387  sh sample.sh 0
+  388  clear
+  389  vi biggestof2.sh
+  390  chmod u+x biggestof2.sh 
+  391  sh biggestof2.sh 2 5
+  392  sh biggestof2.sh 0 9
+  393  sh biggestof2.sh 9 0
+  394  sh biggestof2.sh 2 6 8
+  395  vi biggestof3.sh
+  396  chmod u+x biggestof3.sh 
+  397  sh biggestof3.sh 3 6 9
+  398  sh biggestof3.sh 9 3 6
+  399  sh -x biggestof3.sh 3 6 9
+  400  sh -x biggestof3.sh 3 9 6 1 4
+  401  vi biggestof3.sh 
+  402  vi biggestof2.sh
+  403  df -h .
+  404  echo $?
+  405  qwerty
+  406  echo $?
+  407  echo $$
+  408  clear
+  409  sleep 60 &
+  410  echo $!
+  411  vi biggestof3.sh 
+  412  sh  biggestof3.sh 3 6 9 4 5 7 0 
+  413  vi biggestof3.sh 
+  414  sh  biggestof3.sh 3 6 9 4 5 7 0 
+  415  sh  biggestof3.sh 3 6
+  416  vi biggestof3.sh 
+  417  echo $?
+  418  ps -ef 
+  419  sleep 60 &
+  420  ps -ef 
+  421  echo $!
+  422  ls -lrt
+  423  clear
+  424  cd shell_scripts/
+  425  ls -lrt
+  426  vi add_num.sh
+  427  sh add_num.sh 
+  428  ls -lrt
+  429  ./add_num.sh
+  430  chmod u+x add_num.sh 
+  431  ./add_num.sh 
+  432  ./add_num.sh 8 9
+  433  vi add_num.sh
+  434  ./add_num.sh 8 9
+  435  vi add_num.sh
+  436  ./add_num.sh 8 9
+  437  vi add_num.sh
+  438  ./add_num.sh 8 9
+  439  vi add_num.sh
+  440  vi string_add.sh
+  441  sh string_add.sh SHELL SCRIPT
+  442  vi string_add.sh
+  443  sh string_add.sh SHELL SCRIPT
+  444  vi string_add.sh
+  445  sh string_add.sh SHELL SCRIPT
+  446  vi string_add.sh
+  447  vi print_char.sh
+  448  sh print_char.sh 6 3
+  449  sh print_char.sh 5 6
+  450  vi print_char.sh
+  451  sh print_char.sh 
+  452  vi print_char.sh
+  453  man read
+  454  vi read_print.sh
+  455  clear
+  456  sh read_print.sh 
+  457  vi read_print.sh
+  458  sh read_print.sh 
+  459  vi read_print.sh
+  460  ls -lrt
+  461  rm 1
+  462  sh read_print.sh 
+  463  vi read_print.sh
+  464  sh read_print.sh 
+  465  clear
+  466  sh read_print.sh 
+  467  vi read_print.sh
+  468  vi leap_year.sh
+  469  vi add_num.sh 
+  470  sh add_num.sh 6 3
+  471  vi add_num.sh 
+  472  sh add_num.sh 6 3
+  473  sh add_num.sh 6 4
+  474  vi leap_year.sh 
+  475  sh leap_year.sh 
+  476  vi leap_year.sh 
+  477  sh leap_year.sh 
+  478  vi leap_year.sh 
+  479  sh leap_year.sh 
+  480  vi leap_year.sh 
+  481  sh leap_year.sh 
+  482  vi leap_year.sh 
+  483  sh leap_year.sh 
+  484  vi leap_year.sh 
+  485  vi add_num.sh 
+  486  vi leap_year.sh 
+  487  sh leap_year.sh 
+  488  vi leap_year.sh 
+  489  cleae
+  490  clear
+  491  vi check_fs.sh
+  492  vi check_fs.sh 
+  493  ls -lrt
+  494  sh check_fs.sh 
+  495  cd ..
+  496  ls -lrt
+  497  cd shell_scripts/
+  498  sh check_fs.sh 
+  499  vi check_fs.sh 
+  500  sh check_fs.sh 
+  501  vi check_fs.sh 
+  502  sh check_fs.sh 
+  503  vi check_fs.sh 
+  504  ls -lrt
+  505  vi print_char.sh
+  506  vi leap_year.sh 
+  507  sh leap_year.sh 
+  508  vi add_num.sh 
+  509  ls -lrt
+  510  vi add.sh
+  511  sh add.sh 
+  512  vi add.sh
+  513  cd shell_scripts/
+  514  ls -lrt
+  515  crontab -l
+  516  crontab -e
+  517  ls -lrt
+  518  cat sample.sh 
+  519  vi basic_script.sh 
+  520  crontab -l
+  521  pwd
+  522  crontab -e
+  523  sudo crontab -e
+  524  crontab -l
+  525  crontab -e
+  526  crontab -l
+  527  vi basic_script.sh 
+  528  crontab -e
+  529  crontab -l
+  530  ps -ef
+  531  sudo crontab -e
+  532  crontab -l
+  533  ps -ef
+  534  ps -ef | egrep "sleep|300" 
+  535  date
+  536  sudo crontab -e
+  537  sudo crontab -l
+  538  ps -ef | egrep "sleep|300" | grep -v grep
+  539  ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}'
+  540  ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}' 
+  541  ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}' | kill -9 
+  542  ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}' | xargs kill -9
+  543  sudo ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}' | xargs kill -9
+  544   ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}' |sudo  xargs kill -9
+  545   ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}
+  546   ps -ef | egrep "sleep|300" | grep -v grep |awk -F " " '{print $2}'
+  547   ps -ef | egrep "sleep|300" 
+  548   ps -ef | egrep "sleep|300" | grep -v grep
+  549  date
+  550  ps -ef
+  551  clear
+  552  df -h .
+  553  df -h . | awk -F " " '{print $(NF -1)}'
+  554  df -h . | awk -F " " '{print $(NF -1)}'|tail -1
+  555  df -h . | awk -F " " '{print $(NF -1)}'|tail -1 | sed "s/%//g"
+  556  vi disk_space.sh
+  557  sh disk_space.sh 
+  558  df -h .
+  559  vi disk_space.sh
+  560  mailx
+  561  sudo yum install mailx -y
+  562  man mailx
+  563   8 6 
+  564  ls -lrt
+  565  vi add.sh 
+  566  ps -ef 
+  567  sh add.sh 
+  568  vi add.sh 
+  569  sh add.sh 
+  570  vi add.sh 
+  571  sh add.sh 
+  572  vi add.sh 
+  573  sh add.sh 
+  574  echo $?
+  575  echo "\$?"
+  576  echo "$?"
+  577  clear 
+  578  ps -ef 
+  579  crontab -e
+  580  clear
+  581  ls -lrt
+  582  crontab -e
+  583  sudo crontab -e
+  584  clear
+  585  cd shell_scripts/
+  586  ls -lrt
+  587  vi basic_while.sh
+  588  sh basic_while.sh 6
+  589  vi basic_while.sh
+  590  sh basic_while.sh 6
+  591  clear
+  592  vi factorial.sh
+  593  sh factorial.sh 
+  594  vi factorial.sh
+  595  sh factorial.sh 
+  596  vi factorial.sh
+  597  sh factorial.sh 
+  598  vi factorial.sh
+  599  sh factorial.sh 
+  600  vi factorial.sh
+  601  sh factorial.sh 
+  602  vi factorial.sh
+  603  vi print_file.sh
+  604  ls -lrt
+  605  sh print_file.sh  biggestof3.sh
+  606  cat biggestof3.sh 
+  607  clear
+  608  sh -x print_file.sh biggestof3.sh 
+  609  clear
+  610  vi count_words_char.sh
+  611  ls -lrt ../linux_commands/
+  612  sh count_words_char.sh /home/ec2-user/linux_commands/file1.txt
+  613  vi count_words_char.sh
+  614  VAR=SHELLSCRIPT
+  615  echo $VAR
+  616  cat $VAR
+  617  vi input.txt
+  618  cat input.txt 
+  619  clear
+  620  vi basic_for.sh
+  621  sh basic_for.sh 
+  622  sh-x basic_for.sh 
+  623  sh -x basic_for.sh 
+  624  clear
+  625  vi add_list_num.sh
+  626  sh add_list_num.sh 1 2 3 4 5 6 7 8 9 10
+  627  sh -x add_list_num.sh 1 2 3 4 5 6 7 8 9 10
+  628  clear
+  629  sh -x add_list_num.sh 1 2 3 4 
+  630  exit
+  631  cd shell_scripts/
+  632  ls -lrt
+  633  vi fact.sh
+  634  sh fact.sh 3 4 5 
+  635  vi fact.sh
+  636  tac fact.sh 
+  637  clear
+  638  vi odd_even.sh
+  639  sh odd_even.sh
+  640  vi odd_even.sh
+  641  sh odd_even.sh
+  642  vi odd_even.sh
+  643  clear
+  644  vi bigggestofn.sh
+  645  chmod u+x bigggestofn.sh
+  646  ./bigggestofn.sh 2 5 7 9 1 3 4
+  647  vi bigggestofn.sh
+  648  ps -ef | grep apache
+  649  ps -ef | grep httpd
+  650  sudo systemctl httpd start
+  651  sudo systemctl  start httpd
+  652  ps -ef | grep httpd
+  653  clear
+  654  vi service_check.sh
+  655  chmod u+x service_check.sh 
+  656  vi service_check.sh
+  657  ps -ef | grep httpd
+  658  ps -ef | grep httpd | grep -v grep
+  659  VAR=`ps -ef | grep httpd | grep -v grep`
+  660  echo $VAR | grep httpd
+  661  VAR=`ps -ef | grep jenkins | grep -v grep`
+  662  echo $VAR
+  663  echo $VAR | grep jenkins
+  664  vi service_check.sh
+  665  sh service_check.sh httpd
+  666  vi service_check.sh
+  667  sh service_check.sh httpd
+  668  vi service_check.sh
+  669  sh service_check.sh httpd
+  670  sh service_check.sh httpd jenkins
+  671  sh service_check.sh httpd
+  672  sudo systemctl  stop httpd
+  673  sh service_check.sh httpd
+  674  vi service_check.sh
+  675  sh service_check.sh httpd
+  676  vi service_check.sh
+  677  sh service_check.sh httpd
+  678  ps -ef | grep httpd
+  679  vi service_check.sh
+  680  sh service_check.sh httpd
+  681  sudo systemctl  stop httpd
+  682  sudo systemctl  start httpd
+  683  sh service_check.sh httpd
+  684  ps -ef | grep httpd
+  685  vi service_check.sh 
+  686  sh service_check.sh httpd
+  687  sudo systemctl  stop httpd
+  688  sh service_check.sh httpd
+  689  vi service_check.sh 
+  690  sh service_check.sh httpd
+  691  ps -ef | grep httpd
+  692  vi service_check.sh 
+  693  sh service_check.sh httpd
+  694  vi service_check.sh 
+  695  ps -ef|grep httpd
+  696  ps -ef|grep httpd | grep -v httpd
+  697  ps -ef|grep httpd | grep -v httpd | wc -c
+  698  vi service_check.sh 
+  699  sh service_check.sh httpd
+  700  vi service_check.sh 
+  701  sh service_check.sh httpd
+  702  vi service_check.sh 
+  703  sh service_check.sh httpd
+  704  vi service_check.sh 
+  705  sh service_check.sh httpd
+  706  ps -ef | grep httpd
+  707  echo $?
+  708  vi service_check.sh 
+  709  systemctl is-active --quiet httpd
+  710  systemctl is-active --quiet sshd
+  711  sudo systemctl is-active --quiet sshd
+  712  VAR=`systemctl is-active --quiet sshd`
+  713  echo $VAR
+  714  ps -ef |grep sshd
+  715  systemctl is-active --quiet sshd && echo "sshd is running" || echo "sshd is NOT running"
+  716  systemctl is-active --quiet httpd && echo "sshd is running" || echo "sshd is NOT running"
+  717  systemctl is-active --quiet httpd && echo "httpd is running" || echo "sshd is httpd running"
+  718  systemctl is-active --quiet httpd && echo "httpd is running" || echo "httpd is NOT running"
+  719  sudo systemctl start httpd
+  720  systemctl is-active --quiet httpd && echo "httpd is running" || echo "httpd is NOT running"
+  721  ps -eaf | grep -i httpd |sed '/^$/d'
+  722  ps -eaf | grep -i httpd |sed '/^$/d' | wc -l
+  723  vi service_check.sh 
+  724  sh service_check.sh httpd
+  725  sudo systemctl stop httpd
+  726  sh service_check.sh httpd
+  727  vi service_check.sh 
+  728  sh service_check.sh httpd
+  729  vi service_check.sh 
+  730  sh service_check.sh httpd
+  731  vi service_check.sh 
+  732  ps -eaf | grep -i httpd
+  733  ps -eaf | grep -i httpd | grep -v grep
+  734  ps -eaf | grep -i httpd | grep -v grep | sed '/^$/d' | wc -l
+  735  vi service_check.sh 
+  736  sh service_check.sh 
+  737  sudo systemctl start httpd
+  738  sh service_check.sh 
+  739  sudo systemctl stop httpd
+  740  sh service_check.sh 
+  741  vi service_check.sh 
+  742  sh service_check.sh 
+  743  vi service_check.sh 
+  744  sh service_check.sh httpd
+  745  vi service_check.sh 
+  746  sh service_check.sh 
+  747  vi service_check.sh 
+  748  sh service_check.sh 
+  749  ps -ef | grep httpd
+  750  sudo systemctl start httpd
+  751  sh service_check.sh 
+  752  vi service_check.sh 
+  753  ps -ef | grep -i httpd | grep -v grep | sed '/^$/d' | wc -l
+  754  ps -ef | grep -i httpd | grep -v grep  | wc -l
+  755  VAR="httpd"
+  756  ps -ef | grep -i $VAR | grep -v grep  | wc -l
+  757  sudo systemctl stop httpd
+  758  ps -ef | grep -i $VAR | grep -v grep  | wc -l
+  759  vi service_check.sh 
+  760  sh service_check.sh 
+  761  vi service_check.sh 
+  762  sh service_check.sh 
+  763  sudo systemctl start httpd
+  764  sh service_check.sh 
+  765  vi service_check.sh 
+  766  cp service_check.sh sr.sh
+  767  vi sr.sh 
+  768  sh sr.sh 
+  769  sh sr.sh httpd jenkins sshd 
+  770  vi sr.sh 
+  771  sh-x sr.sh httpd jenkins sshd 
+  772  sh -x sr.sh httpd jenkins sshd 
+  773  vi sr.sh 
+  774  ps -ef | grep -i jenkins
+  775  for NAME in "httpd jenkins sshd";do VAR=$(ps -ef |grep -i "$NAME"|grep -v "grep" | wc -l);echo $VAR;done
+  776  for NAME in `httpd jenkins sshd`;do VAR=$(ps -ef |grep -i "$NAME"|grep -v "grep" | wc -l);echo $VAR;done
+  777  for NAME in "httpd jenkins sshd";do echo $NAME;VAR=$(ps -ef |grep -i "$NAME"|grep -v "grep" | wc -l);echo $VAR;done
+  778  vi sr.sh 
+  779  sh -x sr.sh httpd jenkins sshd 
+  780  vi sr.sh 
+  781  sh -x sr.sh httpd jenkins sshd 
+  782  vi sr.sh 
+  783  sh -x sr.sh httpd jenkins sshd 
+  784  vi sr.sh 
+  785  sh -x sr.sh httpd jenkins sshd 
+  786  vi sr.sh 
+  787  ps -aux | grep jenkins
+  788  ps -aux | grep jenkins | grep -v grep
+  789  vi sr.sh 
+  790  sh -x sr.sh httpd jenkins sshd 
+  791  vi sr.sh 
+  792  sh -x sr.sh httpd jenkins sshd 
+  793  vi sr.sh 
+  794  sh -x sr.sh httpd jenkins sshd 
+  795  vi sr.sh 
+  796  systemctl show -p ActiveState https
+  797  systemctl show -p ActiveState httpd
+  798  systemctl show -p ActiveState httpd | sed 's/ActiveState=//g'
+  799  vi sr.sh 
+  800  sh -x sr.sh httpd jenkins sshd 
+  801  vi sr.sh 
+  802  systemctl show -p ActiveState sshd
+  803  systemctl show -p  sshd
+  804  systemctl show   sshd
+  805  systemctl show  -p ActiveState  sshd
+  806  systemctl show  -p ActiveState  jenkins
+  807  systemctl show  -p ActiveState  xyz
+  808  sudo -i
+  809  cd linux_commands/
+  810  ls -lrt
+  811  touch access_log
+  812  touch error_log
+  813  pwd
+  814  ls -lrt
+  815  cd shell_scripts/
+  816  ls -lrt
+  817  rm 1
+  818  cd
+  819  eccho "gfgf" 
+  820  eccho "gfgf" 2> file.txt
+  821  cat file.txt 
+  822  eccho "gfgf" > file.txt
+  823  cat file.txt 
+  824  eccho "gfgf" > error.txt 2>&1
+  825  cat error.txt 
+  826  echo "gfgf" > error.txt 2>&1
+  827  cat error.txt 
+  828  cd shell_scripts/
+  829  ls -lrt
+  830  cd ../linux_commands/
+  831  ls -lrt
+  832  cd sub_dir1/
+  833  l s-lrt
+  834  ls -lrt
+  835  cd sub_dir2/
+  836  ls 
+  837  cd ..
+  838  rm -rf sub_dir2/
+  839  touch abc{1..100}.log
+  840  ls -lrt
+  841  pwd
+  842  ls | wc -l
+  843  ps -ef | grep httpd
+  844  systemctl start httpd
+  845  sudo systemctl start httpd
+  846  ps -ef | grep httpd
+  847  cd /usr/sbin/httpd
+  848  cd  /var/log/httpd
+  849  sudo -i
+  850  ls -lrt
+  851  pwd
+  852  cd ../../shell_scripts/
+  853  vi cleanup.sh
+  854  cd -
+  855  ls -lrt 
+  856  ls -lrt | wc -l
+  857  ls | wc -l
+  858  cd -
+  859  vi cleanup.sh
+  860  sh cleanup.sh 
+  861  ls | wc -l
+  862  pwd
+  863  vi cleanup.sh
+  864  cd -
+  865  ls -rt 
+  866  ls -rt | head 80
+  867  ls -rt | head -80
+  868  cd -
+  869  vi cleanup.sh 
+  870  sh -x cleanup.sh 
+  871  cd -
+  872  ls -lrt
+  873  cd -
+  874  sh -x cleanup.sh 
+  875  vi case_ex.sh
+  876  sh case_ex.sh 
+  877  ]
+  878  date
+  879  date | cut -d " " -f1
+  880  date +%u
+  881  date +%a
+  882  date +%a |tr '[:upper:]'
+  883  date +%a |tr '[:upper:]' '[:lower:]'
+  884  date +%a |tr  '[:lower:]' '[:upper:]'
+  885  vi date_ex.sh
+  886  sh date_ex.sh 
+  887  cd -
+  888  cd ..
+  889  ls -lrt
+  890  cd ../shell_scripts/
+  891  vi case_ex.sh 
+  892  vi date_ex.sh 
+  893  sh -x date_ex.sh 
+  894  vi date_ex.sh 
+  895  sh -x date_ex.sh 
+  896  vi date_ex.sh 
+  897  vi menu_scipt.sh
+  898  ls -lrt
+  899  rm 1
+  900  sh menu_scipt.sh 
+  901  vi menu_scipt.sh
+  902  ls -lrt
+  903  paste case_ex.sh date_ex.sh
+  904  clear
+  905  ls
+  906  paste add.sh case_ex.sh
+  907  clear
+  908  cd linux_commands/
+  909  ls -lrt
+  910  cat sample1.csv 
+  911  cat sample2.csv 
+  912  vi sample1.csv 
+  913  vi sample2.csv 
+  914  cat sample1.csv sample2.csv 
+  915  paste sample1.csv sample2.csv 
+  916  cd ../shell_scripts/
+  917  ls -lrt
+  918  vi joinfile.sh
+  919  cd -
+  920  pwd
+  921  cd -
+  922  vi joinfile.sh 
+  923  sh joinfile.sh 
+  924  vi joinfile.sh 
+  925  clear
+  926  STR=LINUX
+  927  echo $STR
+  928  echo "${STR:4:1}"
+  929  echo "${STR:3:1}"
+  930  echo "${STR:2:1}"
+  931  echo "${STR:1:1}"
+  932  echo "${STR:0:1}"
+  933  echo "${STR:-1:1}"
+  934  echo "${STR:0:1}"
+  935  echo "${STR:0:-1}"
+  936  echo "${STR:0:-2}"
+  937  echo "${STR:0:-3}"
+  938  echo "${STR:0:-4}"
+  939  clear
+  940  vi arrayex.sh
+  941  sh arrayex.sh 1 2 3 4 5 6 7
+  942  vi arrayex.sh
+  943  sh arrayex.sh 1 2 3 4 5 6 7
+  944  vi arrayex.sh
+  945  sh arrayex.sh 1 2 3 4 5 6 7
+  946  vi arrayex.sh
+  947  sh arrayex.sh 1 2 3 4 5 6 7
+  948  vi arrayex.sh
+  949  sh arrayex.sh 1 2 3 4 5 6 7
+  950  vi arrayex.sh
+  951  clear
+  952  cd ../linux_commands/
+  953  ls -lrt
+  954  vi sample3.csv 
+  955  cat sample3.csv 
+  956  awk '/webserver/,/appserver/' sample3.csv 
+  957  exit
+  958  clear
+  959  sudo yum install git -y
+  960  which git
+  961  whereis git
+  962  git --version
+  963  cd shell_scripts/
+  964  ls -lrt
+  965  cd ..
+  966  ls -lrt
+  967  mkdir firstname
+  968  cd firstname/
+  969  ls -lrt
+  970  git init
+  971  ls -lart
+  972  cd .git/
+  973  ls -lrt
+  974  cat config 
+  975  cd ..
+  976  ls -lrt
+  977  clear
+  978  git config --global init.defaultBranch master
+  979  git branch
+  980  ls -lrt
+  981  git config --global user.name "keshav"
+  982  git config --global user.name "manu"
+  983  git config --global user.email "1293manuraju@gmail.com"
+  984  cd .git/
+  985  cat config 
+  986  ls -lrt
+  987  cd info/
+  988  ls 
+  989  cd ..
+  990  ls -lrt
+  991  git remote add origin https://github.com/manuraju93/firstname.git
+  992  cp ../shell_scripts/* .
+  993  ls -lrt
+  994  pwd
+  995  clear
+  996  ls -lrt
+  997  clear
+  998  ls -lrt
+  999  clear
+ 1000  git status
+ 1001  clear
+ 1002  cd firstname/
+ 1003  ls -lrt
+ 1004  clear
+ 1005  git status
+ 1006  git branch -M master
+ 1007  ls
+ 1008  git status
+ 1009  git add basic_while.sh
+ 1010  clear
+ 1011  git status
+ 1012  git commit -m "adding a basic while loop script"
+ 1013  git status
+ 1014  git remote -v
+ 1015  git push 
+ 1016  git push --set-upstream origin master
+ 1017  git status
+ 1018  git add add.sh add_num.sh add_list_num.sh arrayex.sh
+ 1019  git status
+ 1020  git commit -m "sciprts for adding numbers"
+ 1021  git push
+ 1022  git remote -v
+ 1023  cd ~/.ssh/
+ 1024  ls -lrt
+ 1025  cat id_rsa.pub 
+ 1026  cd -
+ 1027  git remote -v
+ 1028  git remote set-url origin git@github.com:manuraju93/firstname.git
+ 1029  git remote -v
+ 1030  git status
+ 1031  ls
+ 1032  clear
+ 1033  git pull
+ 1034  ls -lrt
+ 1035  git status
+ 1036  git add *
+ 1037  git status
+ 1038  git commit -m "adding all scripts"
+ 1039  git push 
+ 1040  history
+ 1041  history > history.txt
