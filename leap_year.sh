@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "ENTER THE YEAR TO CHECK"
 read YEAR
-
 if [[ $YEAR =~ ^[[:digit:]]+$ ]];
 then
 	Y=$(( $YEAR % 4 ))
@@ -15,4 +14,4 @@ then
 else
 	echo "PLEASE ENTER ONLY NUMBERS"
 fi
-
+echo "LEAP YEAR is $YEAR"
