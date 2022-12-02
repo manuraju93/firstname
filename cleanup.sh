@@ -1,7 +1,5 @@
 #!/bin/bash
-
-
-DIR_PATH="/home/ec2-user/linux_commands/sub_dir1"
+DIR_PATH=$1
 
 TOTAL=`ls ${DIR_PATH}| wc -l`
 
