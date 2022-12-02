@@ -1,5 +1,6 @@
 #!/bin/bash
-DIR_PATH=$1
+echo "IN BELOW PATH FILES WILL GET DELETED"
+DIR_PATH="/home/ec2-user/linux_commands/sub_dir1"
 
 TOTAL=`ls ${DIR_PATH}| wc -l`
 
