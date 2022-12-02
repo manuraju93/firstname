@@ -1,11 +1,9 @@
 #!/bin/bash
-
 echo "ENTER THE YEAR TO CHECK"
 read YEAR
 
 if [[ $YEAR =~ ^[[:digit:]]+$ ]];
 then
-
 	Y=$(( $YEAR % 4 ))
 
 	if [ $Y -eq 0 ];
