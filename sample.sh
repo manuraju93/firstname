@@ -1,6 +1,5 @@
 #!/bin/bash
-
-if [ $1 -eq 5 ];
+if [ $1 -eq 7 ];
 then
 	echo "ENTERED NUMBER IS $1"
 else
