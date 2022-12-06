@@ -1,8 +1,6 @@
 #!/bin/bash
-
 echo -n "ENTER A NUMBER: "
 read VAR
-
 case $VAR in
 	1)
 		echo "ONE"
