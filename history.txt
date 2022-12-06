@@ -998,3 +998,4 @@
  1039  git push 
  1040  history
  1041  history > history.txt
+ 1042  git pull
