@@ -1,5 +1,4 @@
 #!/bin/bash
-
 for NAME in $*
 do
 	echo "$NAME"	
@@ -10,6 +9,7 @@ do
        		echo "SERVICE $NAME is running"
 	else
        		echo "SERVICE $NAME is not running"
-		
 	fi
 done
+
+echo "SCRIPT NAME IS $0"
